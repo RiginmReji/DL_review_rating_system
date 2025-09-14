@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Review Rating Prediction</title>
+</head>
+<body>
+    <h1>Enter a Review</h1>
+
+    <form method="POST">
+        <textarea name="review" rows="5" cols="50" placeholder="Type your review here..." required></textarea><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_A %}
+        <h3>Balanced Model (A) Prediction: {{ prediction_A }}</h3>
+    {% endif %}
+
+    {% if prediction_B %}
+        <h3>Imbalanced Model (B) Prediction: {{ prediction_B }}</h3>
+    {% endif %}
+</body>
+</html>
 
